@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <!--<p class="zs_mobile"></p>-->
+        <span class="zs_mobile"></span>
+</body>
+</html>
+<script>
+    $(function () {
+        mobile="13703980175";
+        var reg = /^(\d{4})\d+(\d{4})$/;    //银行卡替成星号。
+        var usermobile = mobile.replace(reg, "$1****$2");
+//        usermobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
+//        console.log(usermobile);
+        $('.zs_mobile').html(usermobile);   //替换过的手机号放里面。
+    });
+    var reg = /^(\d{7})\d+(\d{0})$/;    //手机号正则替换星号
+</script>
